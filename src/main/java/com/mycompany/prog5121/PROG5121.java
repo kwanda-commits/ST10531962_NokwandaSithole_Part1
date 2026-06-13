@@ -40,7 +40,6 @@ class Message {
     }
 }
 
-// NJABULO SHANDU ST 10518194 PROG POE
 public class PROG5121 {// main class
 
     // Part 3: Five Parallel 1D Arrays (populated via methods, no hard-coding)
@@ -119,7 +118,6 @@ public class PROG5121 {// main class
         return "Recipient number entered successfully";
     }
 
-    // NJABULO SHANDU ST 10518194 PROG POE
     // Generate message hash from ID, sequence number, and first/last word of message
     public static String createMessageHash(String id, int num, String msg) {
         String[] words = msg.trim().split("\\s+");
@@ -155,7 +153,6 @@ public class PROG5121 {// main class
 
    
     // PARALLEL ARRAY HELPERS
-    // NJABULO SHANDU ST 10518194 PROG POE
      /**
      * Adds one message to ALL parallel arrays and the master messages list.
      * This keeps every array in sync at all times.
@@ -239,7 +236,6 @@ public class PROG5121 {// main class
             System.out.println("Invalid number. Must start with +27 and have 9 digits. Example: +27123456789");
         }
 
-        // NJABULO SHANDU ST 10518194 PROG POE
         // Display registration message and return credentials
         System.out.println(registerUser(username, password));
         return new String[]{username, password};
@@ -305,7 +301,6 @@ public class PROG5121 {// main class
 
 
     // SEND MESSAGE
-    // NJABULO SHANDU ST 10518194 PROG POE
     
     public static void sendMessage() {
         if (sentCount >= messageLimit) {
@@ -527,7 +522,6 @@ public class PROG5121 {// main class
 
 
     // PART 3 - STORED MESSAGES SUB-MENU (Options a to f)
-    // NJABULO SHANDU ST 10518194 PROG POE
     // Displays the Stored Messages sub-menu and handles option selection
     
     public static void storedMessages() {
@@ -659,7 +653,6 @@ public class PROG5121 {// main class
         return true;
     }
 
-    // NJABULO SHANDU ST 10518194 PROG POE
     // f. Display full report — shows Message Hash, Recipient, Status, and Message
     public static void displayFullReport() {
         System.out.println("\n.......... FULL MESSAGE REPORT ...........");
@@ -669,7 +662,7 @@ public class PROG5121 {// main class
             return;
         }
         System.out.printf("%-20s %-16s %-10s %s%n",
-                "Message Hash", "Recipient", "Status", "Message");                                                                                    // NJABULO SHANDU ST 10518194 PROG POE                                                                                                                                           // NJABULO SHANDU ST 10518194 PROG POE                                                                                                                  // NJABULO SHANDU ST 10518194 PROG POE                                                                                                 
+                "Message Hash", "Recipient", "Status", "Message");                                                                                                                                                                                                                                                                                                                                                                                                                                           
         System.out.println("...............................................................");
         for (Message m : messages) {
             String preview = m.content.length() > 35
@@ -686,9 +679,7 @@ public class PROG5121 {// main class
 
 
     
-    // PART 3 - READ JSON FILE INTO ARRAY
-    // NJABULO SHANDU ST 10518194 PROG POE
-    
+    // PART 3 - READ JSON FILE INTO ARRAY    
     // Reads the saved messages.json file line by line and loads message bodies
     // into the storedMessages parallel array. No external JSON library is needed.
     
@@ -780,7 +771,6 @@ public class PROG5121 {// main class
 
 
     // SAVE AND EXIT
-    // NJABULO SHANDU ST 10518194 PROG POE
     // Method to save and exit
     public static void saveAndExit() {
         String save;
